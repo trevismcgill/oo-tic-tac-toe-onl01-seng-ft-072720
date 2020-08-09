@@ -1,6 +1,10 @@
 require "pry"
 class TicTacToe
+<<<<<<< HEAD
   attr_accessor
+=======
+  attr_accessor :turn
+>>>>>>> 7180d6d992d7d12698b0aff6b8ed928b68194e8d
 
 WIN_COMBINATIONS = [
   [0,1,2],
@@ -67,6 +71,7 @@ def turn
 end
 
 def won?
+<<<<<<< HEAD
   # I need my @board to reference the same index numbers as win_con while passing its
   #respective strings to win_con
    # win_con.all? {|index| index == "X"} || win_con.all? {|index| index == "O"}
@@ -121,5 +126,50 @@ def won?
     puts "Cat's Game!"
   end
 end
+=======
+  #checks board to see if any win combinations match
+  #will have to compare win combinations to board state
+  #iterate through win combinations / if "X" || "O" = the index of all three of any win comb
+  WIN_COMBINATIONS.detect do |win_con|
+    # binding.pry
+ #    if (@board[win_con[0]]) == "X" && (@board[win_con[1]]) == "X" && (@board[win_con[2]]) == "X"
+ #     win_con
+ #   elsif (@board[win_con[0]]) == "O" && (@board[win_con[1]]) == "O" && (@board[win_con[2]]) == "O"
+ #     win_combo
+ #   end
+ #     false
+ # end
+
+ win_con.all? {|index| index == "X"} || win_con.all? {|index| index == "O"}
+end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 7180d6d992d7d12698b0aff6b8ed928b68194e8d
 
 end
